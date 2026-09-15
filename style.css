@@ -92,7 +92,7 @@ h2 { font-size: clamp(30px, 4.2vw, 46px); letter-spacing: -0.03em; line-height: 
 .ring .period { stroke: var(--rose); }
 .ring .fertile { stroke: var(--peach); }
 .ring .ov { stroke: var(--gold); }
-.ring .dash { stroke-dasharray: var(--len) 1000; stroke-dashoffset: var(--len); transition: stroke-dashoffset 1.4s cubic-bezier(.2,.8,.2,1); }
+.ring .dash { stroke-dasharray: var(--len) 2000; stroke-dashoffset: var(--len); transition: stroke-dashoffset 1.4s cubic-bezier(.2,.8,.2,1); }
 .in .ring .dash, .ring.in .dash { stroke-dashoffset: 0; }
 .ring .d2 { transition-delay: .5s; } .ring .d3 { transition-delay: 1s; }
 .ring text { font-family: var(--sf); fill: var(--ink); }
