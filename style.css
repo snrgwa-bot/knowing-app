@@ -79,7 +79,7 @@ h2 { font-size: clamp(30px, 4.2vw, 46px); letter-spacing: -0.03em; line-height: 
 .cite a { color: var(--mute); }
 
 /* signal marquee */
-.marquee { overflow: hidden; padding: 20px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.marquee { overflow: hidden; padding: 20px 0; margin: 0 auto; max-width: var(--wrap); padding-left: 24px; padding-right: 24px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
 .marquee .track { display: flex; gap: 44px; width: max-content; font-family: var(--mono); font-size: 14px; color: var(--mute); white-space: nowrap; }
 .marquee b { color: var(--ink); font-weight: 600; }
 @media (prefers-reduced-motion: no-preference) { .marquee .track { animation: scroll 40s linear infinite; } @keyframes scroll { to { transform: translateX(-50%) } } }
@@ -124,7 +124,7 @@ h2 { font-size: clamp(30px, 4.2vw, 46px); letter-spacing: -0.03em; line-height: 
 .card p { color: var(--mute); font-size: 15px; }
 
 /* screenshots rail */
-.shots { display: flex; gap: 28px; margin-top: 44px; overflow-x: auto; padding: 10px 24px 30px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.shots { display: flex; gap: 28px; margin-top: 44px; overflow-x: auto; padding: 10px 24px 30px; scroll-snap-type: x mandatory; scrollbar-width: none; justify-content: safe center; }
 .shots::-webkit-scrollbar { display: none; }
 .shots figure { flex: 0 0 auto; scroll-snap-align: center; text-align: center; }
 .shots .phone { width: 236px; border-width: 6px; border-radius: 38px; transition: transform .4s ease; }
