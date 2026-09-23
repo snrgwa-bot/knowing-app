@@ -124,9 +124,14 @@ h2 { font-size: clamp(30px, 4.2vw, 46px); letter-spacing: -0.03em; line-height: 
 .card p { color: var(--mute); font-size: 15px; }
 
 /* screenshots rail */
-.shots { display: flex; gap: 28px; margin-top: 44px; overflow-x: auto; padding: 10px 24px 30px; scroll-snap-type: x mandatory; scrollbar-width: none; justify-content: safe center; }
+.shots { display: flex; gap: 28px; margin-top: 44px; overflow-x: auto; padding: 10px 24px 30px; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .shots::-webkit-scrollbar { display: none; }
 .shots figure { flex: 0 0 auto; scroll-snap-align: center; text-align: center; }
+/* Centre the rail when it fits, and still let it scroll when it doesn't. Auto margins on the first and
+   last items do this reliably in a scroll container; `justify-content: center` makes the overflow
+   unreachable, and `safe center` did not take effect here. */
+.shots > figure:first-of-type { margin-left: auto; }
+.shots > figure:last-of-type { margin-right: auto; }
 .shots .phone { width: 236px; border-width: 6px; border-radius: 38px; transition: transform .4s ease; }
 .shots figure:hover .phone { transform: translateY(-8px); }
 .shots figcaption { margin-top: 16px; font-size: 14px; color: var(--mute); max-width: 236px; }
